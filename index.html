@@ -6,6 +6,15 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="./asset/css/main.css" />
+        <script defer>
+        if ('addEventListener' in window) {
+            window.addEventListener('load', function () {
+                document.body.className = document.body.className.replace(/\bis-preload\b/, '');
+            });
+            document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+        }
+        </script>
+        <script src="./asset/js/baidu.js" defer></script>
     </head>
     
     <body class="is-preload">
@@ -40,15 +49,6 @@
                 </a>
             </div>
         </div>
-        <script>
-        if ('addEventListener' in window) {
-            window.addEventListener('load', function () {
-                document.body.className = document.body.className.replace(/\bis-preload\b/, '');
-            });
-            document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
-        }
-        </script>
-        <script src="./asset/js/baidu.js"></script>
     </body>
 
 </html>
